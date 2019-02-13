@@ -20,7 +20,7 @@ export default class LivePlayer extends Component {
     }
 
     _onChange(event) {
-    	if (event.nativeEvent.code==="status) {
+    	if (event.nativeEvent.code==="status") {
 			switch (event.nativeEvent.code) {
 				//connecting
 				case 1000:
