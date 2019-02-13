@@ -83,6 +83,10 @@
     _paused = paused;
 }
 
+- (void)setMuted:(BOOL)muted {
+    [_np setAudioEnable:muted];
+}
+
 - (void)didSetProps:(NSArray<NSString *> *)changedProps
 {
     bool needStart = NO;

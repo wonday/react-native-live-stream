@@ -20,6 +20,7 @@
 @property (nonatomic) int bufferTime;
 @property (nonatomic) int maxBufferTime;
 @property (nonatomic) BOOL paused;
+@property (nonatomic) BOOL muted;
 @property (strong, nonatomic) NSString *resizeMode;
 
 @property(nonatomic, copy) RCTBubblingEventBlock onChange;
