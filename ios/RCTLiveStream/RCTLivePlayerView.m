@@ -84,7 +84,7 @@
 }
 
 - (void)setMuted:(BOOL)muted {
-    [_np setAudioEnable:muted];
+    [_np setAudioEnable:!muted];
 }
 
 - (void)didSetProps:(NSArray<NSString *> *)changedProps

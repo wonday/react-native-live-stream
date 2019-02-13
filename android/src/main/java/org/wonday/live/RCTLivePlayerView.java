@@ -92,7 +92,7 @@ public class RCTLivePlayerView extends NodePlayerView implements LifecycleEventL
 
     public void setMuted(bool muted) {
         mChangedProps.add("muted");
-        mNodePlayer.setAudioEnable(muted);
+        mNodePlayer.setAudioEnable(!muted);
     }
 
     public void updateView() {
