@@ -71,6 +71,7 @@ LivePlayer.propTypes = {
     bufferTime: PropTypes.number,
     maxBufferTime: PropTypes.number,
     paused: PropTypes.bool,
+    muted: PropTypes.bool,
     resizeMode: PropTypes.oneOf(['contain', 'cover', 'stretch']),
     renderType: PropTypes.oneOf(['SURFACEVIEW', 'TEXTUREVIEW']),
     onLoading: PropTypes.func,
