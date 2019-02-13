@@ -25,7 +25,7 @@ import cn.nodemedia.NodePlayerView;
 public class RCTLivePlayerView extends NodePlayerView implements LifecycleEventListener {
     private NodePlayer mNodePlayer;
     private Boolean isPaused = true;
-    private ArrayList mChangedProps = new ArrayList<String>
+    private ArrayList mChangedProps = new ArrayList<String>;
     private Boolean canSendStatusEvent = false;
 
     public RCTLivePlayerView(ThemedReactContext context) {
