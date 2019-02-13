@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class NodeMediaReactPackage implements ReactPackage{
+public class RNLiveStreamPackage implements ReactPackage{
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
