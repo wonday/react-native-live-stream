@@ -25,7 +25,7 @@ import cn.nodemedia.NodePlayerView;
 public class RCTLivePlayerView extends NodePlayerView implements LifecycleEventListener {
     private NodePlayer mNodePlayer;
     private Boolean isPaused = true;
-    private ArrayList mChangedProps = new ArrayList<String>;
+    private ArrayList mChangedProps = new ArrayList<String>();
     private Boolean canSendStatusEvent = false;
 
     public RCTLivePlayerView(ThemedReactContext context) {
@@ -76,27 +76,27 @@ public class RCTLivePlayerView extends NodePlayerView implements LifecycleEventL
             smode = "ScaleAspectFill";
         }
         NodePlayerView.UIViewContentMode mode = NodePlayerView.UIViewContentMode.valueOf(smode);
-        parent.setUIViewContentMode(mode);
+        setUIViewContentMode(mode);
     }
 
     public void setRenderType(String renderType) {
         mChangedProps.add("renderType");
         NodePlayerView.RenderType type =  NodePlayerView.RenderType.valueOf(renderType);
-        parent.setRenderType(type);
+        setRenderType(type);
     }
 
-    public void setPaused(bool paused) {
+    public void setPaused(Boolean paused) {
         mChangedProps.add("paused");
         isPaused = paused;
     }
 
-    public void setMuted(bool muted) {
+    public void setMuted(Boolean muted) {
         mChangedProps.add("muted");
         mNodePlayer.setAudioEnable(!muted);
     }
 
     public void updateView() {
-        bool needStart = false;
+        Boolean needStart = false;
 
         if (mChangedProps.contains("srcUrl")) {
             // switch srcUrl need stop old srcUrl then start new one
@@ -104,15 +104,9 @@ public class RCTLivePlayerView extends NodePlayerView implements LifecycleEventL
             needStart = true;
         }
 
-        if (mChangedProps.contains("resizeMode")) {
-            // after set resizeMode, not change immediately, so need stop then start...
-            mNodePlayer.stop();
-            needStart = true;
-        }
-
         if (mChangedProps.contains("paused")) {
             if (isPaused) {
-                _canSendStatusEvent = YES;
+                canSendStatusEvent = true;
                 if (mNodePlayer.isLive()) {
                     mNodePlayer.stop();
                 } else {
@@ -124,11 +118,22 @@ public class RCTLivePlayerView extends NodePlayerView implements LifecycleEventL
         }
 
         if (!isPaused && needStart) {
-            _canSendStatusEvent = false;
+            canSendStatusEvent = false;
             mNodePlayer.start();
         }
         
         mChangedProps.clear();
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        mNodePlayer.stop();
     }
 
     @Override
