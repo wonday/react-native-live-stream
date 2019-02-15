@@ -1,4 +1,4 @@
-# react-native-livestream
+# react-native-live-stream
 [![npm](https://img.shields.io/npm/v/react-native-live-stream.svg?style=flat-square)](https://www.npmjs.com/package/react-native-live-stream)
 
 a react-native module for live stream play and publish
