@@ -25,10 +25,12 @@ v1.0.0
 
 ### iOS
 1. Add framework search path
+
 In Xcode, project ```Build Settings``` find ```Framework search path```, 
 add ```$(PROJECT_DIR)/../node_modules/react-native-live-stream/ios/libs``` to it.
 
 2. Add framework
+
 drag ```node_modules/react-native-live-stream/ios/libs/NodeMediaClient.framework``` to Xcode ```frameworks``` folder，select ```create folder references``` then OK.
 
 ## LivePlayer
