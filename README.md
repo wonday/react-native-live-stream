@@ -12,12 +12,12 @@ v1.0.0
 ## Installation
 ### Using npm
 
-    npm install react-native-orientation-locker --save
-    react-native link react-native-orientation-locker
+    npm install react-native-live-stream --save
+    react-native link react-native-live-stream
 
 ### Using yard
-    yard add react-native-orientation-locker
-    react-native link react-native-orientation-locker
+    yard add react-native-live-stream
+    react-native link react-native-live-stream
 
 ## After Installation
 ### Android
@@ -26,10 +26,10 @@ v1.0.0
 ### iOS
 1. Add framework search path
 In Xcode, project ```Build Settings``` find ```Framework search path```, 
-add ```$(PROJECT_DIR)/../node_modules/react-native-aliyun-push/ios/libs``` to it.
+add ```$(PROJECT_DIR)/../node_modules/react-native-live-stream/ios/libs``` to it.
 
 2. Add framework
-drag ```node_modules/react-native-aliyun-push/ios/libs/NodeMediaClient.framework``` to Xcode ```frameworks``` folder，select ```create folder references``` then OK.
+drag ```node_modules/react-native-live-stream/ios/libs/NodeMediaClient.framework``` to Xcode ```frameworks``` folder，select ```create folder references``` then OK.
 
 ## LivePlayer
 
