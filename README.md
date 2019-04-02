@@ -15,8 +15,8 @@ v1.0.0
     npm install react-native-live-stream --save
     react-native link react-native-live-stream
 
-### Using yard
-    yard add react-native-live-stream
+### Using yarn
+    yarn add react-native-live-stream
     react-native link react-native-live-stream
 
 ## After Installation
