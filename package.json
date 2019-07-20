@@ -1,6 +1,6 @@
 {
     "name": "react-native-live-stream",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "summary": "a react-native module for live stream play and publish",
     "description": "a react-native module for live stream play and publish, support ios and android platform",
     "main": "index.js",

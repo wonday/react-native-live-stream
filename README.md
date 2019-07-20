@@ -5,6 +5,9 @@ a react-native module for live stream play and publish
 
 ## ChangeLog
 
+v1.0.1
+1. fix readme
+
 v1.0.0
 1. initial release
 
