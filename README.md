@@ -24,7 +24,25 @@ v1.0.0
 
 ## After Installation
 ### Android
- no addition operation, you can use it now
+
+android/build.gradle
+```
+allprojects {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+        
+        // Add this section
+        maven { 
+            url 'https://jitpack.io' 
+        }
+    }
+}
+```
 
 ### iOS
 1. Add framework search path
